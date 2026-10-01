@@ -5,17 +5,10 @@ public class ProgramaNuevo{
 	int precio = 15000;
 	int descuento = 3000;
 	double meses = 18.0;
-       // Encabezado
-	System.out.println("=== Ficha de compra ===");
-    // Se imprime la variable producto
-	System.out.println("- Producto : " + producto);	
-    //  como quedaría el precio final del producto con el descuento
-	System.out.println("- Precio con descuento : " + (precio - descuento));
-    // se divide el número de meses entre 12 para determinar en cuantos años se termina de pagar
-	System.out.println("- Plazo de pago en anios : " + (meses / 12.0));
-    // se divide el precio con descuentro entre los 18 meses para saber la mensualidad
-    System.out.printf("-Pago mensual: %.2f %n", ((precio - descuento) / meses));
-	System.out.println("=== Fin de la ficha ===");
+       // Esta función imprime la ficha de información del pago del producto, se le pasan dos args, el primero el la cadena de texto con los caracteres de formato
+       // y el segundo son las variables en orden de uso
+    System.out.printf("=== Ficha de compra === %n - Precio con descuento : %d %n - Plazo de pago en anios : %.1f %n -Pago mensual: %.2f %n === Fin de la ficha === ",
+    (precio - descuento), (meses / 12.0),  ((precio - descuento) / meses));
 
 	}
 }
